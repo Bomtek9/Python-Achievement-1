@@ -53,3 +53,16 @@ The project involves building a command line application in Python for managing 
 ## Contributions
 
 No totallly sure why you would want to contribute but have at it! Feel free to open an issue or submit a pull request.
+
+## Developer Decisions
+
+- Exercise 1.2:
+  Name (str): Contains the name of the recipe
+  Cooking Time (int): Contains the cooking time in minutes
+  Ingredients (list): Contains a number of ingredients, each of the str data type
+
+  I used dictionaries for storing the above data for each recipe because of the different data types needing to be stored and the flexibility of dictionaries. Dictionaries can store the recipe names as strings, the ingredients as lists, and the cooking time as integers. Which I may switch the intgere to float given some ingredients may require 1.5 teaspoons for example.
+
+- all_recipes = [ ]
+
+  I decided to use a list as the outer structure to store the recipe dictionaries because lists are sequential and can store multiple recipes that can be modified if needed.
