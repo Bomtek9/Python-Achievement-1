@@ -4,8 +4,3 @@ last_name=last_name.capitalize()
 first_name=first_name.capitalize()
 
 print("Your name is", first_name, last_name)
-
-a=int(input("Enter a number: "))
-b=int(input("Enter a number to add it to: "))
-
-print("The sume of these numbers is " + str(a + b))
