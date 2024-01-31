@@ -34,3 +34,22 @@ for _ in range(n):
 # Print the final ingredients list
 print("Ingredients List:", ingredients_list)
 
+for recipe in recipes_list:
+    cooking_time = recipe["cooking_time"]
+    num_ingredients = len(recipe["ingredients"])
+
+    if cooking_time < 10 and num_ingredients < 4:
+        difficulty = "Easy"
+    elif cooking_time < 10 and num_ingredients >= 4:
+        difficulty = "Medium"
+    elif cooking_time >= 10 and num_ingredients < 4:
+        difficulty = "Intermediate"
+    else:
+        difficulty = "Hard"
+
+        recipe["difficulty"] = difficulty
+        
+        print("Recipes List with Difficulty:")
+        
+    for recipe in recipes_list:
+        print(recipe)
