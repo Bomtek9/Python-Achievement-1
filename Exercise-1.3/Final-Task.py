@@ -3,28 +3,29 @@ ingredients_list = []
 
 
 def take_recipe():
-        name = input("Enter the name of your recipe: ")
-        cooking_time = int(input("Enter how many minutes it will take to complete: "))
-        ingredients = input("Enter the list of ingredients, separated by commas: ").split(", ")
+    name = input("Enter the name of your recipe: ")
+    cooking_time = int(input("Enter how many minutes it will take to complete: "))
+    ingredients = input("Enter the list of ingredients, separated by commas: ").split(", ")
 
-        # Call the function to take recipe input
-        recipe = {'name': name, 'cooking_time': cooking_time, 'ingredients': ingredients}
-        return recipe
+    # Call the function to take recipe input
+    recipe = {'name': name, 'cooking_time': cooking_time, 'ingredients': ingredients}
+    return recipe
 
 
-
-n = input(int("How many more recipes do you want to add? "))
+n = int(input("How many more recipes do you want to add? "))
 
 # Run a for loop to take n recipes
 for _ in range(n):
-
     # Run take_recipe() and store its return output in a variable called recipe
     recipe_data = take_recipe()
 
     # Access the recipe information using the dictionary keys
-    print("Recipe Name:", recipe_data['name'])
-    print("Cooking Time:", recipe_data['cooking_time'])
-    print("Ingredients:", recipe_data['ingredients'])
+    print("\nRecipe:")
+    print("Name:", recipe_data['name'])
+    print("Cooking Time (min):", recipe_data['cooking_time'])
+    print("Ingredients:")
+    for ingredient in recipe_data['ingredients']:
+        print(f" - {ingredient}")
 
     # Run another loop to check and add new ingredients to ingredients_list
     for ingredient in recipe_data['ingredients']:
@@ -32,8 +33,11 @@ for _ in range(n):
             ingredients_list.append(ingredient)
 
 # Print the final ingredients list
-print("Ingredients List:", ingredients_list)
+print("\nUnique Ingredients List:")
+for ingredient in ingredients_list:
+    print(f" - {ingredient}")
 
+# Determine Recipe Difficulty and Add to recipes_list
 for recipe in recipes_list:
     cooking_time = recipe["cooking_time"]
     num_ingredients = len(recipe["ingredients"])
@@ -47,9 +51,15 @@ for recipe in recipes_list:
     else:
         difficulty = "Hard"
 
-        recipe["difficulty"] = difficulty
-        
-        print("Recipes List with Difficulty:")
-        
-    for recipe in recipes_list:
-        print(recipe)
+    recipe["difficulty"] = difficulty
+
+# Print Recipes List with Difficulty
+print("\nRecipes List with Difficulty:")
+for recipe in recipes_list:
+    print("\nRecipe:")
+    print("Name:", recipe['name'])
+    print("Cooking Time (min):", recipe['cooking_time'])
+    print("Ingredients:")
+    for ingredient in recipe['ingredients']:
+        print(f" - {ingredient}")
+    print("Difficulty Level:", recipe["difficulty"])
