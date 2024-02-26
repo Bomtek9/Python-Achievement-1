@@ -50,19 +50,47 @@ The project involves building a command line application in Python for managing 
 - Follow on-screen instructions to manage recipes.
 - Use the search option to find recipes based on ingredients.
 
+## Developer Actions
+
+Exercise 1: Intro to Python Programming
+● Install Python on macOS, Windows, or Linux
+● Create and manage virtual environments
+● Use pip to install and manage packages
+
+Exercise 2: Data Types in Python
+● Use data types and methods to execute Python commands that store recipes containing their
+own internal data
+● Enter a number of these recipes into another linear data structure
+
+Exercise 3: Functions and Other Operations in Python
+● Create your first script on a .py script file
+● Build a script that uses if-elif-else statements, for loops, and functions to take recipes from the
+user then display them
+
+Exercise 4: File Handling in Python
+● Create a Python script that takes recipes from the user and writes the data in a binary file
+● Create another script that reads the binary file and lists out the available ingredients. The user
+chooses an ingredient and the script displays all recipes which contain it
+● Use Python’s exception handling features to handle common errors
+
+Exercise 5: Object-Oriented Programming in Python
+● Build a custom class for your recipes, which contains its own data attributes for name,
+ingredients, cooking time, and difficulty, as well as other custom methods to interact with this
+data
+
+Exercise 6: Connecting to Databases in Python
+● Set up a MySQL database and connect your scripts to it
+● Build an application that creates, reads, updates, and deletes recipes, as well as searching for
+them by a single ingredient
+
+Exercise 7: Finalizing Your Python Program
+● Use an Object Relational Mapper from SQLAlchemy to manage the contents of your database
+from your application
+● Build a user-friendly menu for entering and searching recipes and ingredients
+● Store recipe and ingredient data in a MySQL database
+● Implement recipe search according to user-defined ingredients
+● Implement a detailed display of the recipe selected by the user
+
 ## Contributions
 
-No totallly sure why you would want to contribute but have at it! Feel free to open an issue or submit a pull request.
-
-## Developer Decisions
-
-- Exercise 1.2:
-  Name (str): Contains the name of the recipe
-  Cooking Time (int): Contains the cooking time in minutes
-  Ingredients (list): Contains a number of ingredients, each of the str data type
-
-  I used dictionaries for storing the above data for each recipe because of the different data types needing to be stored and the flexibility of dictionaries. Dictionaries can store the recipe names as strings, the ingredients as lists, and the cooking time as integers. Which I may switch the intgere to float given some ingredients may require 1.5 teaspoons for example.
-
-- all_recipes = [ ]
-
-  I decided to use a list as the outer structure to store the recipe dictionaries because lists are sequential and can store multiple recipes that can be modified if needed.
+Not totallly sure why you would want to contribute but have at it! Feel free to open an issue or submit a pull request.
